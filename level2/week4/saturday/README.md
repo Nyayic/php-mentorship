@@ -11,3 +11,10 @@
 - To create a destructor in PHP, you need to define a method with the name __destruct. 
 
 ### ACCESS MODIFIERS
+In PHP, access modifiers are keywords that are used to control the visibility and access of class properties and methods. There are three types of access modifiers in PHP: public, private, and protected.
+
+- public: The public modifier allows the property or method to be accessed from anywhere, inside or outside of the class. It has no restrictions on its access.
+
+- private: The private modifier restricts the property or method to be accessed only from within the class in which it is defined. It cannot be accessed from outside the class or even from the child classes that inherit from it.
+
+- protected: The protected modifier allows the property or method to be accessed only from within the class in which it is defined, and also from any child classes that inherit from it. It cannot be accessed from outside the class hierarchy.
