@@ -6,15 +6,12 @@
      * 2. Implement php code that connects to the database
      * 3. Start maniputating the database
      */
-
     // 1. Specify the database details
     $server_name = 'localhost';
     $username = 'root';
     $password = "root";
     $database_name = "SchoolMIS";
-
     // Implemnt php code that connects to the database
-
     $connection = new mysqli($server_name, $username, $password, $database_name);
     if ($connection->connect_error):
         echo "Error connecting to database";
@@ -40,7 +37,6 @@
         // We shall display information here
 
         $num_rows = mysqli_num_rows($results);
-
         // if( $num_rows > 0):
         //     // echo "{$num_rows} result found";
         //     echo "You've logged in successfully";
@@ -50,16 +46,16 @@
             $_SESSION['username'] = $myusername;
             header("Location: dashboard.php")
 ?>
-<p><a href="logout.php">logout</a></p>
-<?php
-            
-            // while($row = mysqli_fetch_assoc($results)):
-            //     echo "id: {$row['id']} date: {$row['date']} username: {$row['username']}";
-            // endwhile;
-        else:
-            echo "Login failed.  Check your username and password";
-        endif; 
-        mysqli_close($connection);
-    endif;
-
+    <p>
+        <a href="logout.php">logout</a>
+    </p>
+<?php      
+    // while($row = mysqli_fetch_assoc($results)):
+    //     echo "id: {$row['id']} date: {$row['date']} username: {$row['username']}";
+    // endwhile;
+    else:
+        echo "Login failed.  Check your username and password";
+    endif; 
+    mysqli_close($connection);
+endif;
 ?>

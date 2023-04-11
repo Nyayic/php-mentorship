@@ -46,5 +46,4 @@
         endif; 
         mysqli_close($connection);
     endif;
-
 ?>
